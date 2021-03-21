@@ -12,7 +12,7 @@ import { DataService } from "../data.service";
     public post: any;
     public isLoading: boolean = false;
     public isVisible: boolean = false;
-    public element: SearchItem[] = []
+    public elements: any;
     formGroup: FormGroup;
   constructor(
       private formBuilder: FormBuilder,
@@ -34,7 +34,7 @@ doSearch(value: string) {
      this.dataservice.getSearch().subscribe(res => {
         this.isLoading = false;
         this.isVisible = true;
-         this.element = res[0];
+         this.elements = res;
      },err => {
         err.error.message;
         this.isLoading = false;
