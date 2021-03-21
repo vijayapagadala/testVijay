@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+      "target": "https://purchaseorder.azurewebsites.net/api/BuyerSuppliedDetails?&email=jnarkar@gmail.com&ponumber=L3HPO2009&anid=AN1001",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
