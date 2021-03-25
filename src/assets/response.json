@@ -1,0 +1,1369 @@
+[
+    {
+        "Records": [
+            {
+                "ApprovedState": 4,
+                "InitialUniqueName": "L3HPO2009",
+                "InvoicedState": 1,
+                "SubmitDate": "2020-12-04T19:30:56Z",
+                "ReceivedState": 1,
+                "HoldTillDate": null,
+                "NumberReceivableOrders": 0,
+                "SupplierLocation": {
+                    "UniqueName": "0000494524"
+                },
+                
+                "OrderStatusPunchOutDisabled": true,
+                "OrderID": "L3HPO2009",
+                "ChargeAmount": null,
+                "CreateDate": "2020-12-04T19:30:56Z",
+                "Conditions": {
+                    "UniqueName": "CC0081",
+                    "TAndCVersion": 630
+                },
+                "Name": "Test - 2689 Ship To Change - Service PO",
+                "TotalCost": {
+                    "AmountInReportingCurrency": 11660.0,
+                    "ApproxAmountInBaseCurrency": 11660.0,
+                    "Amount": 11660.0,
+                    "ConversionDate": "2020-12-04T19:30:56Z",
+                    "Currency": {
+                        "UniqueName": "USD"
+                    }
+                },
+                "OrderConfirmationState": 1,
+                "LastModified": "2020-12-04T19:30:57Z",
+                "AdvancedShipNoticeState": 1,
+                "Requester": {
+                    "UniqueName": "test.latonya.davidson@accenture.com",
+                    "PasswordAdapter": "ThirdPartyUser"
+                },
+                "InvoicedDate": null,
+                "UsePOLineNumberForIntegration": false,
+                "AmountAccepted": {
+                    "AmountInReportingCurrency": 0.0,
+                    "ApproxAmountInBaseCurrency": 0.0,
+                    "Amount": 0.0,
+                    "ConversionDate": "2020-12-04T19:30:57Z",
+                    "Currency": {
+                        "UniqueName": "USD"
+                    }
+                },
+            
+                 "RemittoAddress":[ "Lorem-London", "Ipsum-New York", "Fox-Dallas", "Trot-Vegas"],
+            
+                "LineItems": [
+                    {
+                        "TaxDetail.Description": null,
+                        "BasePrice": null,
+                        "TaxDetail.FormulaString": null,
+                        "Description.CommonCommodityCode": {
+                            "UniqueName": "51919000",
+                            "Name": "(Serv) All Other Information Services"
+                        },
+                        "TaxDetail.IsDeductible": null,
+                        "Description.SupplierPartAuxiliaryID": "",
+                        "OriginalPrice": null,
+                        "IsPriceModifiedByUser": false,
+                        "Description.ExtendedDescription": "",
+                        "SupplierLocation": {
+                            "UniqueName": "0000494524"
+                        },
+                        "TaxDetail.TaxLocation": null,
+                        "OrderID": "L3HPO2009",
+                        "ChargeAmount": null,
+                        "NumberConfirmedAccepted": 0.0,
+                        "TaxDetail.TaxAmount": null,
+                        "SplitAccountings": [
+                            {
+                                "NumberInCollection": 1,
+                                "WBSElement": null,
+                                "CostCenter": {
+                                    "ProcurementUnit": null,
+                                    "UniqueName": "0000017081",
+                                    "CompanyCode": {
+                                        "UniqueName": "2689"
+                                    },
+                                    "CostCenterDescription": "EBS Accounts Payable"
+                                },
+                                "GeneralLedger": {
+                                    "GeneralLedgerDescription": "Miscellaneous Expenses",
+                                    "GeneralLedgerDescription2": null,
+                                    "UniqueName": "9310000002",
+                                    "CompanyCode": {
+                                        "UniqueName": "2689"
+                                    },
+                                    "FieldStatusGroup": "G004",
+                                    "ExternalId": "9310000002"
+                                },
+                                "Asset": null,
+                                "InternalOrder": null,
+                                "CompanyCode": null
+                            }
+                        ],
+                        "StartDate": null,
+                        "Description.Description": "2689 - Dilly Branch",
+                        "TaxDetail.ExemptDetail": null,
+                        "IsRecurring": false,
+                        "TaxAmount": {
+                            "AmountInReportingCurrency": 60.0,
+                            "ApproxAmountInBaseCurrency": 60.0,
+                            "Amount": 60.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.Category": null,
+                        "NumberConfirmedSubstituted": 0.0,
+                        "VATAmount": null,
+                        "TaxDetail.AlternateTaxAmount": null,
+                        "Carrier": "",
+                        "ServiceDetails.RequiresServiceEntry": true,
+                        "Description.SupplierPartNumber": "",
+                        "ERSAllowed": false,
+                        "TaxDetail.PaymentDate": null,
+                        "TaxDetail.Percent": null,
+                        "TaxDetail.PerUnit": null,
+                        "DueOn": "2020-12-04T08:00:00Z",
+                        "NumberOnReq": 1,
+                        "OrderMethodCategory": "Direct",
+                        "NumberConfirmedBackOrdered": 0.0,
+                        "DiscountAmount": null,
+                        "Description.ManPartNumber": "",
+                        "ServiceDetails.ServiceEndDate": "2020-12-31T00:00:00Z",
+                        "ServiceDetails.ExpectedAmount": {
+                            "AmountInReportingCurrency": 1000.0,
+                            "ApproxAmountInBaseCurrency": 1000.0,
+                            "Amount": 1000.0,
+                            "ConversionDate": "2020-12-04T19:25:29Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "Description.UnitOfMeasure": {
+                            "UniqueName": "EA"
+                        },
+                        "OrderedDate": "2020-12-04T19:30:57Z",
+                        "TaxDetail.AbatementPercent": null,
+                        "MasterAgreement": null,
+                        "IsAdHoc": true,
+                        "NumberConfirmedRejected": 0.0,
+                        "PaymentTerms": {
+                            "UniqueName": "Z020"
+                        },
+                        "ServiceAmountApproved": {
+                            "AmountInReportingCurrency": 0.0,
+                            "ApproxAmountInBaseCurrency": 0.0,
+                            "Amount": 0.0,
+                            "ConversionDate": "2020-12-04T19:30:56Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "NumberConfirmedAcceptedWithChanges": 0.0,
+                        "BillingAddress": {
+                            "State": "TX",
+                            "Phone": "469-698-2567",
+                            "Country": {
+                                "UniqueName": "US"
+                            },
+                            "PostalCode": "75087",
+                            "City": "Rockwall",
+                            "Fax": "Email:AribaAP@L3Harris.com",
+                            "UniqueName": "L3T2689",
+                            "Name": "L3 Technologies, Inc",
+                            "Lines": "PO Box 9305"
+                        },
+                        "NumberInCollection": 1,
+                        "Description.ManName": "",
+                        "NumberShipped": 0.0,
+                        "TaxCode": {
+                            "UniqueName": "I1"
+                        },
+                        "CommodityCode": {
+                            "UniqueName": "51919000"
+                        },
+                        "Supplier": {
+                            "UniqueName": "0000494524",
+                            "Name": "FRED HARRIS & ASSOCIATES"
+                        },
+                        "LineType": null,
+                        "ServiceDetails.MaxAmount": {
+                            "AmountInReportingCurrency": 10000.0,
+                            "ApproxAmountInBaseCurrency": 10000.0,
+                            "Amount": 10000.0,
+                            "ConversionDate": "2020-12-04T19:27:58Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.TaxPointDate": null,
+                        "DeliverTo": "Pfarner, Erin",
+                        "LineConfirmationStatus": "",
+                        "TaxDetail.Component": null,
+                        "CarrierMethod": "",
+                        "TaxDetail.TaxableAmount": null,
+                        "BoughtFromPreferredSupplier": false,
+                        "Amount": {
+                            "AmountInReportingCurrency": 1000.0,
+                            "ApproxAmountInBaseCurrency": 1000.0,
+                            "Amount": 1000.0,
+                            "ConversionDate": "2020-12-04T19:26:22Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "Quantity": 1.0,
+                        "TaxDetail.Purpose": null,
+                        "ServiceAmountUnderApproval": {
+                            "AmountInReportingCurrency": 0.0,
+                            "ApproxAmountInBaseCurrency": 0.0,
+                            "Amount": 0.0,
+                            "ConversionDate": "2020-12-04T19:30:56Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.IsTriangularTransaction": null,
+                        "EndDate": null,
+                        "ServiceDetails.ServiceLine": false,
+                        "NeedBy": "2020-12-31T10:30:00Z",
+                        "Closed": 1,
+                        "ServiceDetails.ServiceStartDate": "2020-12-04T00:00:00Z",
+                        "ShipTo": {
+                            "State": "AL",
+                            "Phone": "",
+                            "Country": {
+                                "UniqueName": "US"
+                            },
+                            "PostalCode": "36362",
+                            "City": "Ft. Rucker",
+                            "Fax": "",
+                            "UniqueName": "A248",
+                            "Name": "AFS Ft. Rucker",
+                            "Lines": "1100 Dilly Branch Rd."
+                        },
+                        "ItemMasterID": null,
+                        "TaxDetail.TriangularTransactionLawReference": null,
+                        "Requisition": {
+                            "UniqueName": "PR17036"
+                        }
+                    },
+                    {
+                        "TaxDetail.Description": "State Sales/Use",
+                        "BasePrice": null,
+                        "TaxDetail.FormulaString": "USSG2: Standard Seller collected use tax applies because of sale from outside jurisdiction.|9980|P",
+                        "Description.CommonCommodityCode": {
+                            "UniqueName": "51919000",
+                            "Name": "(Serv) All Other Information Services"
+                        },
+                        "TaxDetail.IsDeductible": false,
+                        "Description.SupplierPartAuxiliaryID": "",
+                        "OriginalPrice": null,
+                        "IsPriceModifiedByUser": false,
+                        "Description.ExtendedDescription": "",
+                        "SupplierLocation": {
+                            "UniqueName": "0000494524"
+                        },
+                        "TaxDetail.TaxLocation": "",
+                        "OrderID": "L3HPO2009",
+                        "ChargeAmount": null,
+                        "NumberConfirmedAccepted": 0.0,
+                        "TaxDetail.TaxAmount": {
+                            "AmountInReportingCurrency": 40.0,
+                            "ApproxAmountInBaseCurrency": 40.0,
+                            "Amount": 40.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "SplitAccountings": [
+                            {
+                                "NumberInCollection": 1,
+                                "WBSElement": null,
+                                "CostCenter": {
+                                    "ProcurementUnit": null,
+                                    "UniqueName": "0000017081",
+                                    "CompanyCode": {
+                                        "UniqueName": "2689"
+                                    },
+                                    "CostCenterDescription": "EBS Accounts Payable"
+                                },
+                                "GeneralLedger": {
+                                    "GeneralLedgerDescription": "Miscellaneous Expenses",
+                                    "GeneralLedgerDescription2": null,
+                                    "UniqueName": "9310000002",
+                                    "CompanyCode": {
+                                        "UniqueName": "2689"
+                                    },
+                                    "FieldStatusGroup": "G004",
+                                    "ExternalId": "9310000002"
+                                },
+                                "Asset": null,
+                                "InternalOrder": null,
+                                "CompanyCode": null
+                            }
+                        ],
+                        "StartDate": null,
+                        "Description.Description": "State Sales/Use",
+                        "TaxDetail.ExemptDetail": "",
+                        "IsRecurring": false,
+                        "TaxAmount": {
+                            "AmountInReportingCurrency": 40.0,
+                            "ApproxAmountInBaseCurrency": 40.0,
+                            "Amount": 40.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.Category": "US",
+                        "NumberConfirmedSubstituted": 0.0,
+                        "VATAmount": null,
+                        "TaxDetail.AlternateTaxAmount": null,
+                        "Carrier": "",
+                        "ServiceDetails.RequiresServiceEntry": true,
+                        "Description.SupplierPartNumber": "",
+                        "ERSAllowed": false,
+                        "TaxDetail.PaymentDate": null,
+                        "TaxDetail.Percent": 4.0,
+                        "TaxDetail.PerUnit": 0.0,
+                        "DueOn": "2020-12-04T08:00:00Z",
+                        "NumberOnReq": 100001,
+                        "OrderMethodCategory": "Direct",
+                        "NumberConfirmedBackOrdered": 0.0,
+                        "DiscountAmount": null,
+                        "Description.ManPartNumber": "",
+                        "ServiceDetails.ServiceEndDate": "2020-12-31T00:00:00Z",
+                        "ServiceDetails.ExpectedAmount": {
+                            "AmountInReportingCurrency": 1000.0,
+                            "ApproxAmountInBaseCurrency": 1000.0,
+                            "Amount": 1000.0,
+                            "ConversionDate": "2020-12-04T19:25:29Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "Description.UnitOfMeasure": {
+                            "UniqueName": "EA"
+                        },
+                        "OrderedDate": "2020-12-04T19:30:57Z",
+                        "TaxDetail.AbatementPercent": 100.0,
+                        "MasterAgreement": null,
+                        "IsAdHoc": true,
+                        "NumberConfirmedRejected": 0.0,
+                        "PaymentTerms": {
+                            "UniqueName": "Z020"
+                        },
+                        "ServiceAmountApproved": {
+                            "AmountInReportingCurrency": 0.0,
+                            "ApproxAmountInBaseCurrency": 0.0,
+                            "Amount": 0.0,
+                            "ConversionDate": "2020-12-04T19:30:56Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "NumberConfirmedAcceptedWithChanges": 0.0,
+                        "BillingAddress": {
+                            "State": "TX",
+                            "Phone": "469-698-2567",
+                            "Country": {
+                                "UniqueName": "US"
+                            },
+                            "PostalCode": "75087",
+                            "City": "Rockwall",
+                            "Fax": "Email:AribaAP@L3Harris.com",
+                            "UniqueName": "L3T2689",
+                            "Name": "L3 Technologies, Inc",
+                            "Lines": "PO Box 9305"
+                        },
+                        "NumberInCollection": 100001,
+                        "Description.ManName": "",
+                        "NumberShipped": 0.0,
+                        "TaxCode": null,
+                        "CommodityCode": {
+                            "UniqueName": "51919000"
+                        },
+                        "Supplier": {
+                            "UniqueName": "0000494524",
+                            "Name": "FRED HARRIS & ASSOCIATES"
+                        },
+                        "LineType": {
+                            "UniqueName": "State Sales/Use_1"
+                        },
+                        "ServiceDetails.MaxAmount": {
+                            "AmountInReportingCurrency": 10000.0,
+                            "ApproxAmountInBaseCurrency": 10000.0,
+                            "Amount": 10000.0,
+                            "ConversionDate": "2020-12-04T19:27:58Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.TaxPointDate": null,
+                        "DeliverTo": "Pfarner, Erin",
+                        "LineConfirmationStatus": "",
+                        "TaxDetail.Component": null,
+                        "CarrierMethod": "",
+                        "TaxDetail.TaxableAmount": {
+                            "AmountInReportingCurrency": 1000.0,
+                            "ApproxAmountInBaseCurrency": 1000.0,
+                            "Amount": 1000.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "BoughtFromPreferredSupplier": false,
+                        "Amount": {
+                            "AmountInReportingCurrency": 40.0,
+                            "ApproxAmountInBaseCurrency": 40.0,
+                            "Amount": 40.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "Quantity": 1.0,
+                        "TaxDetail.Purpose": "",
+                        "ServiceAmountUnderApproval": {
+                            "AmountInReportingCurrency": 0.0,
+                            "ApproxAmountInBaseCurrency": 0.0,
+                            "Amount": 0.0,
+                            "ConversionDate": "2020-12-04T19:30:56Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.IsTriangularTransaction": false,
+                        "EndDate": null,
+                        "ServiceDetails.ServiceLine": false,
+                        "NeedBy": "2020-12-31T10:30:00Z",
+                        "Closed": 1,
+                        "ServiceDetails.ServiceStartDate": "2020-12-04T00:00:00Z",
+                        "ShipTo": {
+                            "State": "AL",
+                            "Phone": "",
+                            "Country": {
+                                "UniqueName": "US"
+                            },
+                            "PostalCode": "36362",
+                            "City": "Ft. Rucker",
+                            "Fax": "",
+                            "UniqueName": "A248",
+                            "Name": "AFS Ft. Rucker",
+                            "Lines": "1100 Dilly Branch Rd."
+                        },
+                        "ItemMasterID": null,
+                        "TaxDetail.TriangularTransactionLawReference": "",
+                        "Requisition": {
+                            "UniqueName": "PR17036"
+                        }
+                    },
+                    {
+                        "TaxDetail.Description": "County Sales/Use",
+                        "BasePrice": null,
+                        "TaxDetail.FormulaString": "USSG2: Standard Seller collected use tax applies because of sale from outside jurisdiction.|9981|P",
+                        "Description.CommonCommodityCode": {
+                            "UniqueName": "51919000",
+                            "Name": "(Serv) All Other Information Services"
+                        },
+                        "TaxDetail.IsDeductible": false,
+                        "Description.SupplierPartAuxiliaryID": "",
+                        "OriginalPrice": null,
+                        "IsPriceModifiedByUser": false,
+                        "Description.ExtendedDescription": "",
+                        "SupplierLocation": {
+                            "UniqueName": "0000494524"
+                        },
+                        "TaxDetail.TaxLocation": "",
+                        "OrderID": "L3HPO2009",
+                        "ChargeAmount": null,
+                        "NumberConfirmedAccepted": 0.0,
+                        "TaxDetail.TaxAmount": {
+                            "AmountInReportingCurrency": 20.0,
+                            "ApproxAmountInBaseCurrency": 20.0,
+                            "Amount": 20.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "SplitAccountings": [
+                            {
+                                "NumberInCollection": 1,
+                                "WBSElement": null,
+                                "CostCenter": {
+                                    "ProcurementUnit": null,
+                                    "UniqueName": "0000017081",
+                                    "CompanyCode": {
+                                        "UniqueName": "2689"
+                                    },
+                                    "CostCenterDescription": "EBS Accounts Payable"
+                                },
+                                "GeneralLedger": {
+                                    "GeneralLedgerDescription": "Miscellaneous Expenses",
+                                    "GeneralLedgerDescription2": null,
+                                    "UniqueName": "9310000002",
+                                    "CompanyCode": {
+                                        "UniqueName": "2689"
+                                    },
+                                    "FieldStatusGroup": "G004",
+                                    "ExternalId": "9310000002"
+                                },
+                                "Asset": null,
+                                "InternalOrder": null,
+                                "CompanyCode": null
+                            }
+                        ],
+                        "StartDate": null,
+                        "Description.Description": "County Sales/Use",
+                        "TaxDetail.ExemptDetail": "",
+                        "IsRecurring": false,
+                        "TaxAmount": {
+                            "AmountInReportingCurrency": 20.0,
+                            "ApproxAmountInBaseCurrency": 20.0,
+                            "Amount": 20.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.Category": "US",
+                        "NumberConfirmedSubstituted": 0.0,
+                        "VATAmount": null,
+                        "TaxDetail.AlternateTaxAmount": null,
+                        "Carrier": "",
+                        "ServiceDetails.RequiresServiceEntry": true,
+                        "Description.SupplierPartNumber": "",
+                        "ERSAllowed": false,
+                        "TaxDetail.PaymentDate": null,
+                        "TaxDetail.Percent": 2.0,
+                        "TaxDetail.PerUnit": 0.0,
+                        "DueOn": "2020-12-04T08:00:00Z",
+                        "NumberOnReq": 100002,
+                        "OrderMethodCategory": "Direct",
+                        "NumberConfirmedBackOrdered": 0.0,
+                        "DiscountAmount": null,
+                        "Description.ManPartNumber": "",
+                        "ServiceDetails.ServiceEndDate": "2020-12-31T00:00:00Z",
+                        "ServiceDetails.ExpectedAmount": {
+                            "AmountInReportingCurrency": 1000.0,
+                            "ApproxAmountInBaseCurrency": 1000.0,
+                            "Amount": 1000.0,
+                            "ConversionDate": "2020-12-04T19:25:29Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "Description.UnitOfMeasure": {
+                            "UniqueName": "EA"
+                        },
+                        "OrderedDate": "2020-12-04T19:30:57Z",
+                        "TaxDetail.AbatementPercent": 100.0,
+                        "MasterAgreement": null,
+                        "IsAdHoc": true,
+                        "NumberConfirmedRejected": 0.0,
+                        "PaymentTerms": {
+                            "UniqueName": "Z020"
+                        },
+                        "ServiceAmountApproved": {
+                            "AmountInReportingCurrency": 0.0,
+                            "ApproxAmountInBaseCurrency": 0.0,
+                            "Amount": 0.0,
+                            "ConversionDate": "2020-12-04T19:30:56Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "NumberConfirmedAcceptedWithChanges": 0.0,
+                        "BillingAddress": {
+                            "State": "TX",
+                            "Phone": "469-698-2567",
+                            "Country": {
+                                "UniqueName": "US"
+                            },
+                            "PostalCode": "75087",
+                            "City": "Rockwall",
+                            "Fax": "Email:AribaAP@L3Harris.com",
+                            "UniqueName": "L3T2689",
+                            "Name": "L3 Technologies, Inc",
+                            "Lines": "PO Box 9305"
+                        },
+                        "NumberInCollection": 100002,
+                        "Description.ManName": "",
+                        "NumberShipped": 0.0,
+                        "TaxCode": null,
+                        "CommodityCode": {
+                            "UniqueName": "51919000"
+                        },
+                        "Supplier": {
+                            "UniqueName": "0000494524",
+                            "Name": "FRED HARRIS & ASSOCIATES"
+                        },
+                        "LineType": {
+                            "UniqueName": "County Sales/Use_1"
+                        },
+                        "ServiceDetails.MaxAmount": {
+                            "AmountInReportingCurrency": 10000.0,
+                            "ApproxAmountInBaseCurrency": 10000.0,
+                            "Amount": 10000.0,
+                            "ConversionDate": "2020-12-04T19:27:58Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.TaxPointDate": null,
+                        "DeliverTo": "Pfarner, Erin",
+                        "LineConfirmationStatus": "",
+                        "TaxDetail.Component": null,
+                        "CarrierMethod": "",
+                        "TaxDetail.TaxableAmount": {
+                            "AmountInReportingCurrency": 1000.0,
+                            "ApproxAmountInBaseCurrency": 1000.0,
+                            "Amount": 1000.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "BoughtFromPreferredSupplier": false,
+                        "Amount": {
+                            "AmountInReportingCurrency": 20.0,
+                            "ApproxAmountInBaseCurrency": 20.0,
+                            "Amount": 20.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "Quantity": 1.0,
+                        "TaxDetail.Purpose": "",
+                        "ServiceAmountUnderApproval": {
+                            "AmountInReportingCurrency": 0.0,
+                            "ApproxAmountInBaseCurrency": 0.0,
+                            "Amount": 0.0,
+                            "ConversionDate": "2020-12-04T19:30:56Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.IsTriangularTransaction": false,
+                        "EndDate": null,
+                        "ServiceDetails.ServiceLine": false,
+                        "NeedBy": "2020-12-31T10:30:00Z",
+                        "Closed": 1,
+                        "ServiceDetails.ServiceStartDate": "2020-12-04T00:00:00Z",
+                        "ShipTo": {
+                            "State": "AL",
+                            "Phone": "",
+                            "Country": {
+                                "UniqueName": "US"
+                            },
+                            "PostalCode": "36362",
+                            "City": "Ft. Rucker",
+                            "Fax": "",
+                            "UniqueName": "A248",
+                            "Name": "AFS Ft. Rucker",
+                            "Lines": "1100 Dilly Branch Rd."
+                        },
+                        "ItemMasterID": null,
+                        "TaxDetail.TriangularTransactionLawReference": "",
+                        "Requisition": {
+                            "UniqueName": "PR17036"
+                        }
+                    },
+                    {
+                        "TaxDetail.Description": null,
+                        "BasePrice": null,
+                        "TaxDetail.FormulaString": null,
+                        "Description.CommonCommodityCode": {
+                            "UniqueName": "51919000",
+                            "Name": "(Serv) All Other Information Services"
+                        },
+                        "TaxDetail.IsDeductible": null,
+                        "Description.SupplierPartAuxiliaryID": "",
+                        "OriginalPrice": null,
+                        "IsPriceModifiedByUser": false,
+                        "Description.ExtendedDescription": "",
+                        "SupplierLocation": {
+                            "UniqueName": "0000494524"
+                        },
+                        "TaxDetail.TaxLocation": null,
+                        "OrderID": "L3HPO2009",
+                        "ChargeAmount": null,
+                        "NumberConfirmedAccepted": 0.0,
+                        "TaxDetail.TaxAmount": null,
+                        "SplitAccountings": [
+                            {
+                                "NumberInCollection": 1,
+                                "WBSElement": null,
+                                "CostCenter": {
+                                    "ProcurementUnit": null,
+                                    "UniqueName": "0000017081",
+                                    "CompanyCode": {
+                                        "UniqueName": "2689"
+                                    },
+                                    "CostCenterDescription": "EBS Accounts Payable"
+                                },
+                                "GeneralLedger": {
+                                    "GeneralLedgerDescription": "Miscellaneous Expenses",
+                                    "GeneralLedgerDescription2": null,
+                                    "UniqueName": "9310000002",
+                                    "CompanyCode": {
+                                        "UniqueName": "2689"
+                                    },
+                                    "FieldStatusGroup": "G004",
+                                    "ExternalId": "9310000002"
+                                },
+                                "Asset": null,
+                                "InternalOrder": null,
+                                "CompanyCode": null
+                            }
+                        ],
+                        "StartDate": null,
+                        "Description.Description": "2689 - Dilly Branch",
+                        "TaxDetail.ExemptDetail": null,
+                        "IsRecurring": false,
+                        "TaxAmount": {
+                            "AmountInReportingCurrency": 600.0,
+                            "ApproxAmountInBaseCurrency": 600.0,
+                            "Amount": 600.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.Category": null,
+                        "NumberConfirmedSubstituted": 0.0,
+                        "VATAmount": null,
+                        "TaxDetail.AlternateTaxAmount": null,
+                        "Carrier": "",
+                        "ServiceDetails.RequiresServiceEntry": true,
+                        "Description.SupplierPartNumber": "",
+                        "ERSAllowed": false,
+                        "TaxDetail.PaymentDate": null,
+                        "TaxDetail.Percent": null,
+                        "TaxDetail.PerUnit": null,
+                        "DueOn": "2020-12-04T08:00:00Z",
+                        "NumberOnReq": 2,
+                        "OrderMethodCategory": "Direct",
+                        "NumberConfirmedBackOrdered": 0.0,
+                        "DiscountAmount": null,
+                        "Description.ManPartNumber": "",
+                        "ServiceDetails.ServiceEndDate": "2021-01-31T00:00:00Z",
+                        "ServiceDetails.ExpectedAmount": {
+                            "AmountInReportingCurrency": 10000.0,
+                            "ApproxAmountInBaseCurrency": 10000.0,
+                            "Amount": 10000.0,
+                            "ConversionDate": "2020-12-04T19:28:23Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "Description.UnitOfMeasure": {
+                            "UniqueName": "EA"
+                        },
+                        "OrderedDate": "2020-12-04T19:30:57Z",
+                        "TaxDetail.AbatementPercent": null,
+                        "MasterAgreement": null,
+                        "IsAdHoc": true,
+                        "NumberConfirmedRejected": 0.0,
+                        "PaymentTerms": {
+                            "UniqueName": "Z020"
+                        },
+                        "ServiceAmountApproved": {
+                            "AmountInReportingCurrency": 0.0,
+                            "ApproxAmountInBaseCurrency": 0.0,
+                            "Amount": 0.0,
+                            "ConversionDate": "2020-12-04T19:30:56Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "NumberConfirmedAcceptedWithChanges": 0.0,
+                        "BillingAddress": {
+                            "State": "TX",
+                            "Phone": "469-698-2567",
+                            "Country": {
+                                "UniqueName": "US"
+                            },
+                            "PostalCode": "75087",
+                            "City": "Rockwall",
+                            "Fax": "Email:AribaAP@L3Harris.com",
+                            "UniqueName": "L3T2689",
+                            "Name": "L3 Technologies, Inc",
+                            "Lines": "PO Box 9305"
+                        },
+                        "NumberInCollection": 2,
+                        "Description.ManName": "",
+                        "NumberShipped": 0.0,
+                        "TaxCode": {
+                            "UniqueName": "I1"
+                        },
+                        "CommodityCode": {
+                            "UniqueName": "51919000"
+                        },
+                        "Supplier": {
+                            "UniqueName": "0000494524",
+                            "Name": "FRED HARRIS & ASSOCIATES"
+                        },
+                        "LineType": null,
+                        "ServiceDetails.MaxAmount": {
+                            "AmountInReportingCurrency": 20000.0,
+                            "ApproxAmountInBaseCurrency": 20000.0,
+                            "Amount": 20000.0,
+                            "ConversionDate": "2020-12-04T19:28:23Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.TaxPointDate": null,
+                        "DeliverTo": "Pfarner, Erin",
+                        "LineConfirmationStatus": "",
+                        "TaxDetail.Component": null,
+                        "CarrierMethod": "",
+                        "TaxDetail.TaxableAmount": null,
+                        "BoughtFromPreferredSupplier": false,
+                        "Amount": {
+                            "AmountInReportingCurrency": 10000.0,
+                            "ApproxAmountInBaseCurrency": 10000.0,
+                            "Amount": 10000.0,
+                            "ConversionDate": "2020-12-04T19:28:23Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "Quantity": 1.0,
+                        "TaxDetail.Purpose": null,
+                        "ServiceAmountUnderApproval": {
+                            "AmountInReportingCurrency": 0.0,
+                            "ApproxAmountInBaseCurrency": 0.0,
+                            "Amount": 0.0,
+                            "ConversionDate": "2020-12-04T19:30:56Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.IsTriangularTransaction": null,
+                        "EndDate": null,
+                        "ServiceDetails.ServiceLine": false,
+                        "NeedBy": "2020-12-31T10:30:00Z",
+                        "Closed": 1,
+                        "ServiceDetails.ServiceStartDate": "2020-12-04T00:00:00Z",
+                        "ShipTo": {
+                            "State": "AL",
+                            "Phone": "",
+                            "Country": {
+                                "UniqueName": "US"
+                            },
+                            "PostalCode": "36362",
+                            "City": "Ft. Rucker",
+                            "Fax": "",
+                            "UniqueName": "A248",
+                            "Name": "AFS Ft. Rucker",
+                            "Lines": "1100 Dilly Branch Rd."
+                        },
+                        "ItemMasterID": null,
+                        "TaxDetail.TriangularTransactionLawReference": null,
+                        "Requisition": {
+                            "UniqueName": "PR17036"
+                        }
+                    },
+                    {
+                        "TaxDetail.Description": "State Sales/Use",
+                        "BasePrice": null,
+                        "TaxDetail.FormulaString": "USSG2: Standard Seller collected use tax applies because of sale from outside jurisdiction.|9980|P",
+                        "Description.CommonCommodityCode": {
+                            "UniqueName": "51919000",
+                            "Name": "(Serv) All Other Information Services"
+                        },
+                        "TaxDetail.IsDeductible": false,
+                        "Description.SupplierPartAuxiliaryID": "",
+                        "OriginalPrice": null,
+                        "IsPriceModifiedByUser": false,
+                        "Description.ExtendedDescription": "",
+                        "SupplierLocation": {
+                            "UniqueName": "0000494524"
+                        },
+                        "TaxDetail.TaxLocation": "",
+                        "OrderID": "L3HPO2009",
+                        "ChargeAmount": null,
+                        "NumberConfirmedAccepted": 0.0,
+                        "TaxDetail.TaxAmount": {
+                            "AmountInReportingCurrency": 400.0,
+                            "ApproxAmountInBaseCurrency": 400.0,
+                            "Amount": 400.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "SplitAccountings": [
+                            {
+                                "NumberInCollection": 1,
+                                "WBSElement": null,
+                                "CostCenter": {
+                                    "ProcurementUnit": null,
+                                    "UniqueName": "0000017081",
+                                    "CompanyCode": {
+                                        "UniqueName": "2689"
+                                    },
+                                    "CostCenterDescription": "EBS Accounts Payable"
+                                },
+                                "GeneralLedger": {
+                                    "GeneralLedgerDescription": "Miscellaneous Expenses",
+                                    "GeneralLedgerDescription2": null,
+                                    "UniqueName": "9310000002",
+                                    "CompanyCode": {
+                                        "UniqueName": "2689"
+                                    },
+                                    "FieldStatusGroup": "G004",
+                                    "ExternalId": "9310000002"
+                                },
+                                "Asset": null,
+                                "InternalOrder": null,
+                                "CompanyCode": null
+                            }
+                        ],
+                        "StartDate": null,
+                        "Description.Description": "State Sales/Use",
+                        "TaxDetail.ExemptDetail": "",
+                        "IsRecurring": false,
+                        "TaxAmount": {
+                            "AmountInReportingCurrency": 400.0,
+                            "ApproxAmountInBaseCurrency": 400.0,
+                            "Amount": 400.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.Category": "US",
+                        "NumberConfirmedSubstituted": 0.0,
+                        "VATAmount": null,
+                        "TaxDetail.AlternateTaxAmount": null,
+                        "Carrier": "",
+                        "ServiceDetails.RequiresServiceEntry": true,
+                        "Description.SupplierPartNumber": "",
+                        "ERSAllowed": false,
+                        "TaxDetail.PaymentDate": null,
+                        "TaxDetail.Percent": 4.0,
+                        "TaxDetail.PerUnit": 0.0,
+                        "DueOn": "2020-12-04T08:00:00Z",
+                        "NumberOnReq": 100003,
+                        "OrderMethodCategory": "Direct",
+                        "NumberConfirmedBackOrdered": 0.0,
+                        "DiscountAmount": null,
+                        "Description.ManPartNumber": "",
+                        "ServiceDetails.ServiceEndDate": "2021-01-31T00:00:00Z",
+                        "ServiceDetails.ExpectedAmount": {
+                            "AmountInReportingCurrency": 10000.0,
+                            "ApproxAmountInBaseCurrency": 10000.0,
+                            "Amount": 10000.0,
+                            "ConversionDate": "2020-12-04T19:28:23Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "Description.UnitOfMeasure": {
+                            "UniqueName": "EA"
+                        },
+                        "OrderedDate": "2020-12-04T19:30:57Z",
+                        "TaxDetail.AbatementPercent": 100.0,
+                        "MasterAgreement": null,
+                        "IsAdHoc": true,
+                        "NumberConfirmedRejected": 0.0,
+                        "PaymentTerms": {
+                            "UniqueName": "Z020"
+                        },
+                        "ServiceAmountApproved": {
+                            "AmountInReportingCurrency": 0.0,
+                            "ApproxAmountInBaseCurrency": 0.0,
+                            "Amount": 0.0,
+                            "ConversionDate": "2020-12-04T19:30:56Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "NumberConfirmedAcceptedWithChanges": 0.0,
+                        "BillingAddress": {
+                            "State": "TX",
+                            "Phone": "469-698-2567",
+                            "Country": {
+                                "UniqueName": "US"
+                            },
+                            "PostalCode": "75087",
+                            "City": "Rockwall",
+                            "Fax": "Email:AribaAP@L3Harris.com",
+                            "UniqueName": "L3T2689",
+                            "Name": "L3 Technologies, Inc",
+                            "Lines": "PO Box 9305"
+                        },
+                        "NumberInCollection": 100003,
+                        "Description.ManName": "",
+                        "NumberShipped": 0.0,
+                        "TaxCode": null,
+                        "CommodityCode": {
+                            "UniqueName": "51919000"
+                        },
+                        "Supplier": {
+                            "UniqueName": "0000494524",
+                            "Name": "FRED HARRIS & ASSOCIATES"
+                        },
+                        "LineType": {
+                            "UniqueName": "State Sales/Use_1"
+                        },
+                        "ServiceDetails.MaxAmount": {
+                            "AmountInReportingCurrency": 20000.0,
+                            "ApproxAmountInBaseCurrency": 20000.0,
+                            "Amount": 20000.0,
+                            "ConversionDate": "2020-12-04T19:28:23Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.TaxPointDate": null,
+                        "DeliverTo": "Pfarner, Erin",
+                        "LineConfirmationStatus": "",
+                        "TaxDetail.Component": null,
+                        "CarrierMethod": "",
+                        "TaxDetail.TaxableAmount": {
+                            "AmountInReportingCurrency": 10000.0,
+                            "ApproxAmountInBaseCurrency": 10000.0,
+                            "Amount": 10000.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "BoughtFromPreferredSupplier": false,
+                        "Amount": {
+                            "AmountInReportingCurrency": 400.0,
+                            "ApproxAmountInBaseCurrency": 400.0,
+                            "Amount": 400.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "Quantity": 1.0,
+                        "TaxDetail.Purpose": "",
+                        "ServiceAmountUnderApproval": {
+                            "AmountInReportingCurrency": 0.0,
+                            "ApproxAmountInBaseCurrency": 0.0,
+                            "Amount": 0.0,
+                            "ConversionDate": "2020-12-04T19:30:56Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.IsTriangularTransaction": false,
+                        "EndDate": null,
+                        "ServiceDetails.ServiceLine": false,
+                        "NeedBy": "2020-12-31T10:30:00Z",
+                        "Closed": 1,
+                        "ServiceDetails.ServiceStartDate": "2020-12-04T00:00:00Z",
+                        "ShipTo": {
+                            "State": "AL",
+                            "Phone": "",
+                            "Country": {
+                                "UniqueName": "US"
+                            },
+                            "PostalCode": "36362",
+                            "City": "Ft. Rucker",
+                            "Fax": "",
+                            "UniqueName": "A248",
+                            "Name": "AFS Ft. Rucker",
+                            "Lines": "1100 Dilly Branch Rd."
+                        },
+                        "ItemMasterID": null,
+                        "TaxDetail.TriangularTransactionLawReference": "",
+                        "Requisition": {
+                            "UniqueName": "PR17036"
+                        }
+                    },
+                    {
+                        "TaxDetail.Description": "County Sales/Use",
+                        "BasePrice": null,
+                        "TaxDetail.FormulaString": "USSG2: Standard Seller collected use tax applies because of sale from outside jurisdiction.|9981|P",
+                        "Description.CommonCommodityCode": {
+                            "UniqueName": "51919000",
+                            "Name": "(Serv) All Other Information Services"
+                        },
+                        "TaxDetail.IsDeductible": false,
+                        "Description.SupplierPartAuxiliaryID": "",
+                        "OriginalPrice": null,
+                        "IsPriceModifiedByUser": false,
+                        "Description.ExtendedDescription": "",
+                        "SupplierLocation": {
+                            "UniqueName": "0000494524"
+                        },
+                        "TaxDetail.TaxLocation": "",
+                        "OrderID": "L3HPO2009",
+                        "ChargeAmount": null,
+                        "NumberConfirmedAccepted": 0.0,
+                        "TaxDetail.TaxAmount": {
+                            "AmountInReportingCurrency": 200.0,
+                            "ApproxAmountInBaseCurrency": 200.0,
+                            "Amount": 200.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "SplitAccountings": [
+                            {
+                                "NumberInCollection": 1,
+                                "WBSElement": null,
+                                "CostCenter": {
+                                    "ProcurementUnit": null,
+                                    "UniqueName": "0000017081",
+                                    "CompanyCode": {
+                                        "UniqueName": "2689"
+                                    },
+                                    "CostCenterDescription": "EBS Accounts Payable"
+                                },
+                                "GeneralLedger": {
+                                    "GeneralLedgerDescription": "Miscellaneous Expenses",
+                                    "GeneralLedgerDescription2": null,
+                                    "UniqueName": "9310000002",
+                                    "CompanyCode": {
+                                        "UniqueName": "2689"
+                                    },
+                                    "FieldStatusGroup": "G004",
+                                    "ExternalId": "9310000002"
+                                },
+                                "Asset": null,
+                                "InternalOrder": null,
+                                "CompanyCode": null
+                            }
+                        ],
+                        "StartDate": null,
+                        "Description.Description": "County Sales/Use",
+                        "TaxDetail.ExemptDetail": "",
+                        "IsRecurring": false,
+                        "TaxAmount": {
+                            "AmountInReportingCurrency": 200.0,
+                            "ApproxAmountInBaseCurrency": 200.0,
+                            "Amount": 200.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.Category": "US",
+                        "NumberConfirmedSubstituted": 0.0,
+                        "VATAmount": null,
+                        "TaxDetail.AlternateTaxAmount": null,
+                        "Carrier": "",
+                        "ServiceDetails.RequiresServiceEntry": true,
+                        "Description.SupplierPartNumber": "",
+                        "ERSAllowed": false,
+                        "TaxDetail.PaymentDate": null,
+                        "TaxDetail.Percent": 2.0,
+                        "TaxDetail.PerUnit": 0.0,
+                        "DueOn": "2020-12-04T08:00:00Z",
+                        "NumberOnReq": 100004,
+                        "OrderMethodCategory": "Direct",
+                        "NumberConfirmedBackOrdered": 0.0,
+                        "DiscountAmount": null,
+                        "Description.ManPartNumber": "",
+                        "ServiceDetails.ServiceEndDate": "2021-01-31T00:00:00Z",
+                        "ServiceDetails.ExpectedAmount": {
+                            "AmountInReportingCurrency": 10000.0,
+                            "ApproxAmountInBaseCurrency": 10000.0,
+                            "Amount": 10000.0,
+                            "ConversionDate": "2020-12-04T19:28:23Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "Description.UnitOfMeasure": {
+                            "UniqueName": "EA"
+                        },
+                        "OrderedDate": "2020-12-04T19:30:57Z",
+                        "TaxDetail.AbatementPercent": 100.0,
+                        "MasterAgreement": null,
+                        "IsAdHoc": true,
+                        "NumberConfirmedRejected": 0.0,
+                        "PaymentTerms": {
+                            "UniqueName": "Z020"
+                        },
+                        "ServiceAmountApproved": {
+                            "AmountInReportingCurrency": 0.0,
+                            "ApproxAmountInBaseCurrency": 0.0,
+                            "Amount": 0.0,
+                            "ConversionDate": "2020-12-04T19:30:56Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "NumberConfirmedAcceptedWithChanges": 0.0,
+                        "BillingAddress": {
+                            "State": "TX",
+                            "Phone": "469-698-2567",
+                            "Country": {
+                                "UniqueName": "US"
+                            },
+                            "PostalCode": "75087",
+                            "City": "Rockwall",
+                            "Fax": "Email:AribaAP@L3Harris.com",
+                            "UniqueName": "L3T2689",
+                            "Name": "L3 Technologies, Inc",
+                            "Lines": "PO Box 9305"
+                        },
+                        "NumberInCollection": 100004,
+                        "Description.ManName": "",
+                        "NumberShipped": 0.0,
+                        "TaxCode": null,
+                        "CommodityCode": {
+                            "UniqueName": "51919000"
+                        },
+                        "Supplier": {
+                            "UniqueName": "0000494524",
+                            "Name": "FRED HARRIS & ASSOCIATES"
+                        },
+                        "LineType": {
+                            "UniqueName": "County Sales/Use_1"
+                        },
+                        "ServiceDetails.MaxAmount": {
+                            "AmountInReportingCurrency": 20000.0,
+                            "ApproxAmountInBaseCurrency": 20000.0,
+                            "Amount": 20000.0,
+                            "ConversionDate": "2020-12-04T19:28:23Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.TaxPointDate": null,
+                        "DeliverTo": "Pfarner, Erin",
+                        "LineConfirmationStatus": "",
+                        "TaxDetail.Component": null,
+                        "CarrierMethod": "",
+                        "TaxDetail.TaxableAmount": {
+                            "AmountInReportingCurrency": 10000.0,
+                            "ApproxAmountInBaseCurrency": 10000.0,
+                            "Amount": 10000.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "BoughtFromPreferredSupplier": false,
+                        "Amount": {
+                            "AmountInReportingCurrency": 200.0,
+                            "ApproxAmountInBaseCurrency": 200.0,
+                            "Amount": 200.0,
+                            "ConversionDate": "2020-12-04T19:29:08Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "Quantity": 1.0,
+                        "TaxDetail.Purpose": "",
+                        "ServiceAmountUnderApproval": {
+                            "AmountInReportingCurrency": 0.0,
+                            "ApproxAmountInBaseCurrency": 0.0,
+                            "Amount": 0.0,
+                            "ConversionDate": "2020-12-04T19:30:56Z",
+                            "Currency": {
+                                "UniqueName": "USD"
+                            }
+                        },
+                        "TaxDetail.IsTriangularTransaction": false,
+                        "EndDate": null,
+                        "ServiceDetails.ServiceLine": false,
+                        "NeedBy": "2020-12-31T10:30:00Z",
+                        "Closed": 1,
+                        "ServiceDetails.ServiceStartDate": "2020-12-04T00:00:00Z",
+                        "ShipTo": {
+                            "State": "AL",
+                            "Phone": "",
+                            "Country": {
+                                "UniqueName": "US"
+                            },
+                            "PostalCode": "36362",
+                            "City": "Ft. Rucker",
+                            "Fax": "",
+                            "UniqueName": "A248",
+                            "Name": "AFS Ft. Rucker",
+                            "Lines": "1100 Dilly Branch Rd."
+                        },
+                        "ItemMasterID": null,
+                        "TaxDetail.TriangularTransactionLawReference": "",
+                        "Requisition": {
+                            "UniqueName": "PR17036"
+                        }
+                    }
+                ],
+                "ChangedBy": null,
+                "OrderConfirmationStatusString": "",
+                "ApprovedDate": "2020-12-04T19:30:56Z",
+                "OrderedState": 4,
+                "PreviousApprovalRequestsVersion": -1,
+                "ResubmitDate": null,
+                "NumberCleared": 0.0,
+                "OrderMethodCategory": "Direct",
+                "RejectionReason": null,
+                "Active": true,
+                "ReceivedDate": null,
+                "AmountBilled": null,
+                "NextVersion": null,
+                "NumberBilled": 0.0,
+                "UniqueName": "L3HPO2009",
+                "ReportingCurrency": {
+                    "UniqueName": "USD"
+                },
+                "OrderedDate": "2020-12-04T19:30:57Z",
+                "ManuallyOrdered": false,
+                "IsFromExternalReq": false,
+                "MasterAgreement": null,
+                "AmountCleared": null,
+                "OriginatingSystem": "",
+                "PaymentTerms": {
+                    "UniqueName": "Z020"
+                },
+                "NumberReceivableLineItems": 0,
+                "AmountReconciled": null,
+                "AmountRejected": {
+                    "AmountInReportingCurrency": 0.0,
+                    "ApproxAmountInBaseCurrency": 0.0,
+                    "Amount": 0.0,
+                    "ConversionDate": "2020-12-04T19:30:57Z",
+                    "Currency": {
+                        "UniqueName": "USD"
+                    }
+                },
+                "Supplier": {
+                    "UniqueName": "0000494524",
+                    "Name": "FRED HARRIS & ASSOCIATES"
+                },
+                "PreOrdered": false,
+                "StatusString": "Ordered",
+                "IsBlanketOrder": false,
+                "PreviousVersion": null,
+                "ApprovalRequestsVersion": -1,
+                "AmountInvoiced": null,
+                "OriginatingSystemReferenceID": "",
+                "VersionNumber": 1,
+                "Type": "ariba.purchasing.core.DirectOrder",
+                "ExpirationDate": null,
+                "Closed": 1,
+                "Attachments.Attachments": null,
+                "IsServiceOrder": true,
+                "Requisition": null,
+                "CompanyCode": {
+                    "UniqueName": "2689"
+                },
+                "Preparer": {
+                    "UniqueName": "test.latonya.davidson@accenture.com",
+                    "PasswordAdapter": "ThirdPartyUser"
+                }
+            }
+        ]
+    }
+]

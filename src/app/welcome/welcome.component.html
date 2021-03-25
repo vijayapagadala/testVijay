@@ -10,74 +10,175 @@
                     <div>
                       <mat-form-field floatLabel="never" class="form-element">
                         <mat-select [(value)]="selectedSource" placeholder="Customer">
-                          <mat-option>None</mat-option>
-                          <mat-option value="Lorem">Lorem</mat-option>
+                           <mat-option *ngFor="let customer of pageLoad"  [value]="customer">{{customer}}</mat-option>
                       </mat-select>
                       </mat-form-field>
                     </div>
                     <div>
                       <mat-form-field floatLabel="never" class="form-element">
-                         <input  matInput  placeholder="Po#" formControlName="po">
+                         <input  matInput  placeholder="Po#">
                       </mat-form-field>
                     </div>
-                      <div class="form-element">
-                        <button 
-                        mat-raised-button 
-                        color="primary" 
-                        type="search" 
-                        class="button" 
-                        [disabled]="!formGroup.valid"
-                        (click)="doSearch(formGroup.value)">Search</button>
-                      </div>
-                  
-                    </form>
-                  </div>
-            </mat-card-content>
-          </mat-card>
-        </div>
-      </div>
-      <div *ngIf="loading" class="spinner-border spinner-border-sm">
-      <div class="container" *ngIf="isVisible">
-        <div fxLayout="row" fxLayoutAlign="center center" class="content">
-          <mat-card class="card" >
-           
-            <mat-card-content>
-                <div class="example-container"> 
-                    <form [formGroup]="formGroup" class="form">
+                    <div class="form-element">
+                          <button 
+                          mat-raised-button 
+                          color="primary" 
+                          type="search" 
+                          class="button" 
+                          (click)="doSearch(formGroup.value)">Search</button>
+                    </div>
+                    
+                    <div class="example-container" *ngIf="isVisible"> 
                       <div>
                         <mat-form-field floatLabel="never" class="form-element">
-                          <input  matInput  placeholder="Invoice">
+                          <input  matInput  placeholder="Invoice"  formControlName="invoice" required>
+                          <mat-error *ngIf="formGroup.controls.invoice.hasError('maxlength')">Max length exceeded</mat-error>
                         </mat-form-field>
                       </div>
                       <div>
                         <mat-form-field floatLabel="never" class="form-element">
-                          <mat-select [(value)]="selectedSource" placeholder="Remit to Address">
-                            <mat-option>None</mat-option>
-                            <mat-option value="Lorem">Lorem-New York</mat-option>
-                        </mat-select>
+                          <mat-select [(value)]="selected" placeholder="Remit To Address">
+                            <mat-option *ngFor="let add of address"  [value]="add">{{add}}</mat-option>
+                       </mat-select>
                         </mat-form-field>
                       </div>
                       <div>
                         <mat-form-field floatLabel="never" class="form-element">
-                         <input matInput [matDatepicker]="picker"  placeholder="Invoice Date">
+                         <input matInput [matDatepicker]="picker"  placeholder="mm-dd-yyyy" formControlName="date" required>
                           <mat-datepicker-toggle  matSuffix [for]="picker"></mat-datepicker-toggle>
                           <mat-datepicker #picker></mat-datepicker>
                         </mat-form-field>
                       </div>
-                  
-                    </form>
+                      <div>
+                        <mat-form-field floatLabel="never" class="form-element">
+                          <mat-select [(value)]="selectedCurrency" placeholder="Currency">
+                            <mat-option  [value]="currency">{{currency.UniqueName}}</mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </div>
                   </div>
-            </mat-card-content>
-          </mat-card>
+                </form>
+                </div>
+              </mat-card-content>
+            </mat-card>
         </div>
+    </div>
+    <br>
+    <div class="example-container" *ngIf="headerBoolean"> 
+      <div fxLayout="row" fxLayoutAlign="center center" class="content">
+        <mat-card class="cardtable" >
+          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+            <h3>Header charge</h3>
+          </mat-card-title>
+          <mat-card-content>
+              <div class="example-container mat-elevation-z8">
+                  <mat-table #table [dataSource]="dataSource">
+                    <ng-container matColumnDef="Checked">
+                      <mat-header-cell *matHeaderCellDef>Check</mat-header-cell>
+                      <mat-cell *matCellDef="let element"> 
+                        <mat-checkbox [(ngModel)]="element.checked"></mat-checkbox>
+                      </mat-cell>
+                    </ng-container>
+                  <ng-container matColumnDef="Name">
+                    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                  </ng-container>
+                    <ng-container matColumnDef="Type">
+                      <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
+                      <mat-cell *matCellDef="let element"> {{element.type}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="Amount">
+                      <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+                      <mat-cell *matCellDef="let element"> {{element.amount}} </mat-cell>
+                    </ng-container>
+                  
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;" 
+                    [ngClass]="{hovered: row.hovered, highlighted: row.highlighted}" 
+                    (click)="row.highlighted = !row.highlighted" 
+                    (mouseover)="row.hovered = true" 
+                    (mouseout)="row.hovered = false"></mat-row>
+                  </mat-table>
+                </div>
+          </mat-card-content>
+        </mat-card>
       </div>
+  </div>
+  <br>
+<div class="container" *ngIf="headerBoolean">
+  <div fxLayout="column" fxLayoutGap="20px" fxLayout.gt-md="row"  fxLayoutAlign="space-around center" class="content">
+    <div class="blocks">
+      <button button="submit" mat-raised-button color="primary">
+         <mat-icon>add</mat-icon> Add Header Charge
+      </button>
+      
+      <button button="submit" mat-raised-button color="primary">
+        <mat-icon>delete</mat-icon> Delete Header Charge
+      </button>
+
+      <input type="file" style="display: none" #fileInput accept="image/*" (change)="onChangeFileInput()" />
+      <button mat-raised-button color="primary" class="file-select-button" (click)="onClickFileInputButton()">
+        <mat-icon>attach_file</mat-icon>
+        Choose File
+      </button>
+
+      <p class="file-name" *ngIf="!file; else fileName"></p>
+      <ng-template #fileName>
+        <p class="file-name">{{ file?.name }}</p>
+      </ng-template>
+    </div>
+</div>
 </div>
 <br>
+  <div class="example-container" *ngIf="LineChargeBoolean"> 
+    <div fxLayout="row" fxLayoutAlign="center center" class="content">
+      <mat-card class="cardtable" >
+        <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+          <h3>Line charge</h3>
+        </mat-card-title>
+        <mat-card-content>
+            <div class="example-container mat-elevation-z8">
+                <mat-table #table [dataSource]="dataSource">
+                  <ng-container matColumnDef="Checked">
+                    <mat-header-cell *matHeaderCellDef>Check</mat-header-cell>
+                    <mat-cell *matCellDef="let element"> 
+                      <mat-checkbox [(ngModel)]="element.checked"></mat-checkbox>
+                    </mat-cell>
+                  </ng-container>
+                <ng-container matColumnDef="Name">
+                  <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                </ng-container>
+                  <ng-container matColumnDef="Type">
+                    <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.type}} </mat-cell>
+                  </ng-container>
+                  <ng-container matColumnDef="Amount">
+                    <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.amount}} </mat-cell>
+                  </ng-container>
+                
+                  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                  <mat-row *matRowDef="let row; columns: displayedColumns;" 
+                  [ngClass]="{hovered: row.hovered, highlighted: row.highlighted}" 
+                  (click)="row.highlighted = !row.highlighted" 
+                  (mouseover)="row.hovered = true" 
+                  (mouseout)="row.hovered = false"></mat-row>
+                </mat-table>
+              </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+              
+<!-- <br>
 <div class="container" *ngIf="isVisible">
   <div fxLayout="row" fxLayoutAlign="center center" class="content">
     <mat-card class="cardtable" >
       <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
-        <h3>Header Item(s)</h3>
+        <h3>Header charge</h3>
       </mat-card-title>
       <mat-card-content>
           <div class="example-container mat-elevation-z8">
@@ -181,4 +282,4 @@
     </mat-card>
   </div>
 </div>
-</div>
+</div> -->

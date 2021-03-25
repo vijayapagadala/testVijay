@@ -15,9 +15,15 @@ export class DataService {
 
    public getSearch(){
   {
-   const configUrl = 'https://purchaseorder.azurewebsites.net/api/BuyerSuppliedDetails?&email=jnarkar@gmail.com&ponumber=L3HPO2009&anid=AN1001'
+  // const configUrl = 'https://purchaseorder.azurewebsites.net/api/BuyerSuppliedDetails?&email=jnarkar@gmail.com&ponumber=L3HPO2009&anid=AN1001'
  
-    return this.http.get(configUrl, this.header);
+    return this.http.get("assets/response.json", this.header);
+  }
+}
+
+public getPageLoad(){
+  {
+    return this.http.get("assets/pageload.json");
   }
 }
 }
