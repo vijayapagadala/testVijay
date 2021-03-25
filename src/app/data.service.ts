@@ -26,4 +26,10 @@ public getPageLoad(){
     return this.http.get("assets/pageload.json");
   }
 }
+
+public getHeaderData(){
+  {
+    return this.http.get("assets/header.json");
+  }
+}
 }

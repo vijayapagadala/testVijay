@@ -1,0 +1,7 @@
+{
+    "Name":[ "Charge", "Tax", "Discount" ],
+    "Type": [ "Environmental", "Duty", "Handling","Shipping"],
+    "TypeTax": [ "State Sales", "User sales"]
+}
+
+           

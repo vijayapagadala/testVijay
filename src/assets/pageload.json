@@ -1,8 +1,8 @@
  [
     {
         "ANID":"AN101",
-        "HeaderCharge":true,
-        "LineCharge":false,
+        "HeaderCharge":false,
+        "LineCharge":true,
         "Customer":[ "Lorem", "Ipsum", "Fox", "Trot" ]
     }
         
