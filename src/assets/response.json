@@ -213,7 +213,7 @@
                                 "UniqueName": "USD"
                             }
                         },
-                        "Quantity": 1.0,
+                        "Quantity": 1.12,
                         "TaxDetail.Purpose": null,
                         "ServiceAmountUnderApproval": {
                             "AmountInReportingCurrency": 0.0,
@@ -426,7 +426,7 @@
                                 "UniqueName": "USD"
                             }
                         },
-                        "Quantity": 1.0,
+                        "Quantity": 2.13,
                         "TaxDetail.Purpose": "",
                         "ServiceAmountUnderApproval": {
                             "AmountInReportingCurrency": 0.0,
@@ -639,7 +639,7 @@
                                 "UniqueName": "USD"
                             }
                         },
-                        "Quantity": 1.0,
+                        "Quantity": 3.14,
                         "TaxDetail.Purpose": "",
                         "ServiceAmountUnderApproval": {
                             "AmountInReportingCurrency": 0.0,
@@ -836,7 +836,7 @@
                                 "UniqueName": "USD"
                             }
                         },
-                        "Quantity": 1.0,
+                        "Quantity": 4.15,
                         "TaxDetail.Purpose": null,
                         "ServiceAmountUnderApproval": {
                             "AmountInReportingCurrency": 0.0,
@@ -1049,7 +1049,7 @@
                                 "UniqueName": "USD"
                             }
                         },
-                        "Quantity": 1.0,
+                        "Quantity": 5.16,
                         "TaxDetail.Purpose": "",
                         "ServiceAmountUnderApproval": {
                             "AmountInReportingCurrency": 0.0,
@@ -1262,7 +1262,7 @@
                                 "UniqueName": "USD"
                             }
                         },
-                        "Quantity": 1.0,
+                        "Quantity": 6.17,
                         "TaxDetail.Purpose": "",
                         "ServiceAmountUnderApproval": {
                             "AmountInReportingCurrency": 0.0,

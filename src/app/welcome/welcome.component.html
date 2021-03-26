@@ -1,6 +1,6 @@
 <div>
     <br>
-    <div class="container col-md-6 col-md-offset-1">
+    <div class="container">
         <div fxLayout="row" fxLayoutAlign="center center" class="content">
           <mat-card class="card" >
            
@@ -63,52 +63,6 @@
             </mat-card>
         </div>
     </div>
-    <div class="container col-md-6 col-md-offset-1" *ngIf="LineChargeBoolean">
-        <div fxLayout="row" fxLayoutAlign="center center" class="content">
-          <mat-card class="card" >
-           
-            <mat-card-content>
-              <div>
-                <mat-form-field appearance="fill">
-                  <mat-label>Base Amount:</mat-label>
-                  <input matInput>
-                </mat-form-field>
-              </div>
-              <div>
-                <mat-form-field appearance="fill">
-                  <mat-label>Discount:</mat-label>
-                  <input matInput>
-                </mat-form-field>
-              </div>
-              <div>
-                <mat-form-field appearance="fill">
-                  <mat-label>Charge:</mat-label>
-                  <input matInput>
-                </mat-form-field>
-              </div>
-              <div>
-                <mat-form-field appearance="fill">
-                  <mat-label>Tax:</mat-label>
-                  <input matInput>
-                </mat-form-field>
-              </div>
-              <div>
-                <mat-form-field appearance="fill">
-                  <mat-label>Payable to Supplier:</mat-label>
-                  <input matInput>
-                </mat-form-field>
-              </div>
-              <div>
-                <mat-form-field appearance="fill">
-                  <mat-label>Prior Invoiced Amount:</mat-label>
-                  <input matInput>
-                </mat-form-field>
-              </div>
-            </mat-card-content>
-          </mat-card>
-        </div>
-    </div>
-</div>
     <br>
     <div class="container" *ngIf="headerBoolean">
       <div class="row">
@@ -154,18 +108,12 @@
                               <td>
                                 <div>                               
                                   <select name="name" [(ngModel)]="dropDownOne" class="form-control">
-                                    <!-- <option selected value="undefined">Select an Option</option> -->
                                      <option *ngFor="let name of headerProperty"  [value]="name" selected value="dropDoenOne==Charge">{{name}}</option>
                                    </select>
                                 </div>
                               </td>
                               <td>
-                                <!-- <div *ngIf="dropDownOne =='Select an Option'">
-                                  <select id="selectType" name="selectType" class="form-control">
-                                    <option selected value="undefined">Select an Option</option>
-                                  </select>
-                                </div> -->
-                                <div *ngIf="dropDownOne == 'Discount'">
+                               <div *ngIf="dropDownOne == 'Discount'">
                                   <select id="selectType" name="selectType" class="form-control">
                                      <option  [value]="selectType">select</option>
                                   </select>
@@ -196,7 +144,7 @@
     <br>
     <div class="container" *ngIf="LineChargeBoolean">
       <div class="row">
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-12 col-md-offset-1">
                 <div class="panel panel-default panel-table">
                     <div class="panel-heading">
                         <div class="row">
@@ -226,15 +174,68 @@
                               <td>{{lineItem.NumberInCollection}}</td>
                               <td>{{lineItem["Description.Description"]}}</td>
                               <td>{{lineItem.Quantity}}</td>
-                              <td></td>
+                              <td>{{lineItem["Description.UnitOfMeasure"].UniqueName}}</td>
                                <td>${{lineItem.Amount.Amount}}</td>
-                               <td></td>
+                               <td>${{lineItem.Quantity*lineItem.Amount.Amount}}</td>
                                <td>
-                                <a class="btn btn-default"><span class="glyphicon glyphicon-plus"
-                                  aria-hidden="true"></span></a>
-                                <a class="btn btn-danger"><span class="glyphicon glyphicon-trash"
-                                                                aria-hidden="true" align="center"></span></a>
-                               
+                                <div fxLayout="column" fxLayoutGap="20px" fxLayout.gt-md="row"  fxLayoutAlign="space-around center" class="content">
+                                  <div class="blocks">
+                                      <button button="submit" mat-raised-button color="primary" (click)="openRow();" >
+                                          <mat-icon>add</mat-icon> Add
+                                      </button>
+                                  
+                                      <button button="submit" mat-raised-button color="primary" (click)="deleteRow();">
+                                        <mat-icon>delete</mat-icon> 
+                                      </button>
+                                  </div>
+                                  <div *ngIf="isVisibleHeader">
+                                    <div class="panel-body">
+                                      <table id="mytable" class="table table-striped table-bordered table-list">
+                                          <thead>
+                                          <tr>
+                                              <th class="col-check"><input type="checkbox" id="checkall" onclick="test()"/></th>
+                                              <th class="col-text">Name</th>
+                                              <th class="col-text">Type</th>
+                                              <th>Amount</th>
+                                          </tr>
+                                          </thead>
+                                          <tbody>
+                                          <tr>
+                                            <td align="center"><input type="checkbox" class="checkthis"/></td>
+                                            <td>
+                                              <div>                               
+                                                <select name="name" [(ngModel)]="dropDownOne" class="form-control">
+                                                    <option *ngFor="let name of headerProperty"  [value]="name" selected value="dropDoenOne==Charge">{{name}}</option>
+                                                 </select>
+                                              </div>
+                                            </td>
+                                            <td>
+                                               <div *ngIf="dropDownOne == 'Discount'">
+                                                <select id="selectType" name="selectType" class="form-control">
+                                                   <option  [value]="selectType">select</option>
+                                                </select>
+                                              </div>
+                                             
+                                              <div *ngIf="dropDownOne == 'Charge'">
+                                                <select id="selectType" name="selectType" class="form-control">
+                                                   <option *ngFor="let type of headerType"  [value]="type">{{type}}</option>
+                                                </select>
+                                              </div>
+                                              <div *ngIf="dropDownOne == 'Tax'">
+                                                <select id="selectType" name="selectType" class="form-control">
+                                                   <option *ngFor="let typetax of headerTypeTax"  [value]="typetax">{{typetax}}</option>
+                                                </select>
+                                              </div>
+                                            </td>
+                                            <td>
+                                            <input type="text">
+                                            </td>
+                                          </tr>
+                                          </tbody>
+                                      </table>
+                                      </div>
+                                  </div>
+                                </div>
                                </td>
                                <td></td>
                             </tr>
@@ -244,5 +245,51 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container" *ngIf="LineChargeBoolean">
+      <div fxLayout="row" fxLayoutAlign="center center" class="content">
+        <mat-card class="cardFooter" >
+        
+          <mat-card-content>
+            <div>
+              <mat-form-field appearance="fill">
+                <mat-label>Base Amount:</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field appearance="fill">
+                <mat-label>Discount:</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field appearance="fill">
+                <mat-label>Charge:</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field appearance="fill">
+                <mat-label>Tax:</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field appearance="fill">
+                <mat-label>Payable to Supplier:</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field appearance="fill">
+                <mat-label>Prior Invoiced Amount:</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
 </div>
   

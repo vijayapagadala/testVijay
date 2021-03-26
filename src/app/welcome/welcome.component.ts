@@ -7,6 +7,7 @@ import { PageLoad } from "./pageload";
 import { RemittoAddress } from "./address";
 import { Currency } from "./currency";
 import { Header} from "./header";
+
 @Component({
     selector: 'app-welcome',
     templateUrl: './welcome.component.html',
@@ -28,7 +29,10 @@ import { Header} from "./header";
     public headerType: Header[];
     public headerTypeTax: Header[];
     show: boolean = true;
+    isVisibleHeader: boolean = false;
+    public calculateAmount: number;
     formGroup: FormGroup;
+  dialog: any;
   constructor(
       private formBuilder: FormBuilder,
       private dataservice: DataService
@@ -85,5 +89,14 @@ doSearch(value: string) {
 
     on() {
       this.show = !this.show;
+    }
+
+    openRow() {
+      this.isVisibleHeader = true;
+      this.headerData();
+    }
+
+    deleteRow() {
+      this.isVisibleHeader = false;
     }
 }
