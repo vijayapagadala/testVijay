@@ -15,7 +15,7 @@
   }
   
   .form-element {
-      width: 100%;
+      width: 90%;
   }
   
   .button {
@@ -24,6 +24,10 @@
 
   .card {
     min-width: 50%;
+  }
+
+  .cardfull {
+    width: 100%;
   }
   
   .cardFooter {
@@ -104,4 +108,29 @@
 
 .col-text{
   text-align: left
+}
+
+.tooltip-style {
+  padding-top: 15px;
+}
+
+.hover:after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  margin-left: 5px;
+  background: rgba(0,0,0,0.54);
+  padding: 12px;
+  border-radius: 3px;
+}
+
+div.a {
+  white-space: nowrap; 
+  width: 100px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.a:hover {
+  overflow: visible;
 }
