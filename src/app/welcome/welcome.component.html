@@ -84,7 +84,8 @@
                           <table id="mytable" class="table table-striped table-bordered table-list">
                               <thead>
                               <tr>
-                                  <th class="col-check"><input type="checkbox" id="checkall" onclick="test()"/></th>
+                                <th><input type="checkbox" [checked]="isAllheaderCheckBoxChecked()" (change)="checkAllheaderCheckBox($event)"></th>
+                                  <!-- <th><input type="checkbox"></th> -->
                                   <th>Add/Delete</th>
                                   <th class="col-text">Name</th>
                                   <th class="col-text">Type</th>
@@ -92,47 +93,47 @@
                               </tr>
                               </thead>
                               <tbody>
-                              <tr>
-                                <td align="center"><input type="checkbox" class="checkthis"/></td>
+                              <tr *ngFor="let dynamic of dynamicArray; let i = index;">
+                                <td align="center"><input type="checkbox" value="{{dynamic.id}}" [(ngModel)]="dynamicArray[i].checked" [ngModelOptions]="{standalone: true}"></td>
                                 <td>
                                   <div>
-                                    <button type="button" class="btn btn-primary">
+                                    <button type="button" class="btn btn-primary" (click)="addRow();">
                                       <mat-icon>add</mat-icon> 
                                     </button>
                                   
-                                    <button type="button" class="btn btn-primary">
+                                    <button type="button" class="btn btn-primary" (click)="deleteRow(i)">
                                       <mat-icon>delete</mat-icon>
                                     </button>
                                   </div>
                                 </td>
                                 <td>
                                   <div>                               
-                                    <select name="name" [(ngModel)]="dropDownOne" class="form-control" [ngModelOptions]="{standalone: true}">
+                                    <select name="name" [(ngModel)]="dynamicArray[i].Name" class="form-control" [ngModelOptions]="{standalone: true}">
                                       <option *ngFor="let name of headerProperty"  [value]="name" selected value="dropDoenOne==Charge">{{name}}</option>
                                     </select>
                                   </div>
                                 </td>
                               
                                 <td>
-                                <div *ngIf="dropDownOne == 'Discount'">
-                                    <select id="selectType" name="selectType" class="form-control">
+                                <div *ngIf="dynamicArray[i].Name == 'Discount'">
+                                    <select id="selectType" name="selectType" [(ngModel)]="dynamicArray[i].Type"  [ngModelOptions]="{standalone: true}" class="form-control">
                                       <option  [value]="selectType">select</option>
                                     </select>
                                   </div>
                                 
-                                  <div *ngIf="dropDownOne == 'Charge'">
-                                    <select id="selectType" name="selectType" class="form-control">
+                                  <div *ngIf="dynamicArray[i].Name == 'Charge'">
+                                    <select id="selectType" name="selectType" [(ngModel)]="dynamicArray[i].Type"  [ngModelOptions]="{standalone: true}" class="form-control">
                                       <option *ngFor="let type of headerType"  [value]="type">{{type}}</option>
                                     </select>
                                   </div>
-                                  <div *ngIf="dropDownOne == 'Tax'">
-                                    <select id="selectType" name="selectType" class="form-control">
+                                  <div *ngIf="dynamicArray[i].Name == 'Tax'">
+                                    <select id="selectType" name="selectType" [(ngModel)]="dynamicArray[i].Type"  [ngModelOptions]="{standalone: true}" class="form-control">
                                       <option *ngFor="let typetax of headerTypeTax"  [value]="typetax">{{typetax}}</option>
                                     </select>
                                   </div>
                                 </td>
                                 <td>
-                                <input type="text">
+                                  <input [(ngModel)]="dynamicArray[i].TypeTax"  [ngModelOptions]="{standalone: true}" class="form-control" type="text"/>
                                 </td>
                               </tr>
                               </tbody>
@@ -153,7 +154,8 @@
                 <div class="form-group col-1"></div>
               </div>
             <div class="form-row" *ngIf="LineChargeBoolean">
-              <div class="form-group col-1"></div>
+              <app-tree-grid-load-on-demand-sample></app-tree-grid-load-on-demand-sample>
+              <!-- <div class="form-group col-1"></div>
                 <div class="form-group col-10">
              
                 <div class="panel panel-default panel-table">
@@ -168,7 +170,7 @@
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th class="col-check"><input type="checkbox" id="checkall" onclick="test()"/></th>
+                              <th><input type="checkbox" [checked]="isAllCheckBoxChecked()" (change)="checkAllCheckBox($event)"></th>
                                 <th class="col-text">Discount/Charges/Taxes</th>
                                 <th class="col-text">S.No.</th>
                                 <th class="col-text">Description</th>
@@ -180,16 +182,16 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr *ngFor="let lineItem of element">
-                              <td align="center"><input type="checkbox" class="checkthis"/></td>
+                            <tr *ngFor="let lineItem of element  let i=index;">
+                              <td align="center"><input type="checkbox" value="{{lineItem.id}}" [(ngModel)]="element[i].checked" [ngModelOptions]="{standalone: true}"></td>
                               <td>
                                 <div fxLayout="column" fxLayoutGap="20px" fxLayout.gt-md="row"  fxLayoutAlign="space-around center" class="content">
                                   <div class="blocks">
-                                      <button button="submit" mat-raised-button color="primary" (click)="openRow();" >
+                                      <button button="submit" mat-raised-button color="primary" (click)="openRow(i);" >
                                           <mat-icon>add</mat-icon>
                                       </button>
                                   
-                                      <button button="submit" mat-raised-button color="primary" (click)="deleteRow();">
+                                      <button button="submit" mat-raised-button color="primary" (click)="deletechildRow(i);">
                                         <mat-icon>delete</mat-icon> 
                                       </button>
                                   </div>
@@ -222,7 +224,7 @@
                                               </div>
                                             
                                               <div *ngIf="dropDownOne == 'Charge'">
-                                                <select id="selectType" name="selectType" class="form-control">
+                                                <select id="selectType" name="selectType"  class="form-control">
                                                   <option *ngFor="let type of headerType"  [value]="type">{{type}}</option>
                                                 </select>
                                               </div>
@@ -233,7 +235,7 @@
                                               </div>
                                             </td>
                                             <td>
-                                            <input type="text">
+                                              <input  class="form-control" type="text"/>
                                             </td>
                                           </tr>
                                           </tbody>
@@ -255,7 +257,7 @@
                         </table>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="form-group col-1"></div>
         </div>
         <div class="form-row" *ngIf="LineChargeBoolean">

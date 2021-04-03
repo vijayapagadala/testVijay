@@ -7,6 +7,7 @@ import { PageLoad } from "./pageload";
 import { RemittoAddress } from "./address";
 import { Currency } from "./currency";
 import { Header} from "./header";
+import { DynamicGrid } from "./grid.model";
 
 @Component({
     selector: 'app-welcome',
@@ -36,7 +37,10 @@ import { Header} from "./header";
     formGroup: FormGroup;
     submitted = false;
     options: any;
-  dialog: any;
+    dialog: any;
+    dynamicArray: Array<DynamicGrid> = [];
+    dynamicArraychild: Array<DynamicGrid> = [];
+    newDynamic: any = {};
   constructor(
       private formBuilder: FormBuilder,
       private dataservice: DataService
@@ -48,8 +52,9 @@ ngOnInit() {
       this.pageLoad = res[0].Customer;
       this.pageLoadheadBoolean = res[0].HeaderCharge;
       this.pageLoadLineBoolean = res[0].LineCharge;
-     
     });
+    this.newDynamic = {Name: "", Type: "",TypeTax:""};
+    this.dynamicArray.push(this.newDynamic);
 }
  createForm() {
     this.formGroup = this.formBuilder.group({
@@ -148,20 +153,62 @@ doSearch(value: any) {
       alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.formGroup.value, null, 4));
   }
 
-    openRow() {
-
-      // var currentElement = this.element[index];
-      // this.element.splice(index, 0, currentElement);
+    openRow(index) {
+      // this.newDynamic = {Name: "", Type: "",TypeTax:""};
+      // this.dynamicArraychild.push(this.newDynamic);
+      // return true;
       this.isVisibleHeader = true;
-        this.headerData();
-      
+      this.headerData();
+      // if(index == 0) {
+      //   this.isVisibleHeader = true;
+      //   this.headerData();
+      // } {
+      //   this.isVisibleHeader = false;
+      // }
      }
  
-    deleteRow() {
+    deletechildRow(index) {
       this.isVisibleHeader = false;
+    //   if(this.dynamicArraychild.length ==1) {
+    //     return false;
+    //  } else {
+    //      this.dynamicArraychild.splice(index, 1);
+    //      return true;
+    //  }
     }
 
+    addRow() {
+      this.newDynamic = {Name: "", Type: "",TypeTax:""};
+      this.dynamicArray.push(this.newDynamic);
+      return true;
+    }
+
+    deleteRow(index) {
+      if(this.dynamicArray.length ==1) {
+         return false;
+      } else {
+          this.dynamicArray.splice(index, 1);
+          return true;
+      }
+   }
     numberofsumAmount() {
       return this.element.reduce((sumData: number, b:SearchItem) => sumData + b.Amount, 0);
+    }
+
+    checkAllCheckBox(ev) {
+      this.element.forEach(x => x.checked = ev.target.checked)
+    }
+  
+    isAllCheckBoxChecked() {
+      return this.element.every(p => p.checked);
+      
+    }
+
+    checkAllheaderCheckBox(e) {
+      this.dynamicArray.forEach(x => x.checked = e.target.checked)
+    }
+    
+    isAllheaderCheckBoxChecked() {
+      return this.dynamicArray.every(p => p.checked);
     }
 }
