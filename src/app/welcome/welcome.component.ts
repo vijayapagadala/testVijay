@@ -59,7 +59,7 @@ ngOnInit() {
  createForm() {
     this.formGroup = this.formBuilder.group({
      customer: ['', Validators.required],
-     poNumber: ['', Validators.required],
+     poNumber: ['',  [Validators.required, Validators.maxLength(15)]],
      invoice: ['', [Validators.required, Validators.maxLength(15)]],
      date: ['', Validators.required ],
     });
@@ -77,11 +77,14 @@ const header = []
   });
 }
 doSearch(value: any) {
-  if (value.customer == '' || value.poNumber == '' ) {
-    this.onSubmit();
+  if (value.customer == '' || value.poNumber == '') {
+       this.onSubmit();
   } else {
    
-    //  let params: {
+    if(value.poNumber.length >= 15){
+      this.onSubmit();
+    } else {
+       //  let params: {
     //  email: 'jnarkar@gmail.com';
     //  ponumber: value.poNumber;
     //  anid: 'AN101'
@@ -127,7 +130,9 @@ doSearch(value: any) {
           err.error.message;
           this.isLoading = false;
         })
-  }
+       }
+    }
+   
  }
 
     findsum(data){    
@@ -153,7 +158,7 @@ doSearch(value: any) {
       alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.formGroup.value, null, 4));
   }
 
-    openRow(index) {
+    openRow() {
       // this.newDynamic = {Name: "", Type: "",TypeTax:""};
       // this.dynamicArraychild.push(this.newDynamic);
       // return true;
@@ -210,5 +215,9 @@ doSearch(value: any) {
     
     isAllheaderCheckBoxChecked() {
       return this.dynamicArray.every(p => p.checked);
+    }
+
+    attachPDF() {
+      alert('inside pdf function');
     }
 }

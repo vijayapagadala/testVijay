@@ -2,76 +2,130 @@
   <div class="card-body">
       <form [formGroup]="formGroup">
           <!-- <div class="container" > -->
-            <div class="form-row">
-              <div class="form-group col-4"></div>
-              <div class="form-group col-4">
-                  <mat-card class="cardfull" >
-                      <mat-card-content>
+            <div>
+              <div class="form-row">
+                    <div class="form-group col-2"></div>
+                    <div class="form-group col-2">
+                      <label for="customer" style="font-size: large;">customer:</label>
+                    </div>
+                    <div class="form-group col-4">
                       <div>
-                        <mat-form-field floatLabel="never" class="form-element">
-                          <mat-select [(value)]="selectedSource" placeholder="Customer" formControlName="customer">
-                        
-                            <mat-option *ngFor="let customer of pageLoad"  [value]="customer">{{customer}}</mat-option>
-                        </mat-select>
-                        </mat-form-field>
-                        <mat-icon class="pull-right tooltip-style" matTooltip="Customer Information">info</mat-icon>
+                        <select [(value)]="selectedSource" formControlName="customer" style="width: 100%; padding-top: 10px;">
+                            <option *ngFor="let customer of pageLoad"  [value]="customer">{{customer}}</option>
+                          </select>
                       </div>
+                    </div>
+                    <div class="form-group col-2"> 
+                      <mat-icon matTooltip="Customer Information">info</mat-icon>
+                    </div>
+                    <div class="form-group col-2"> </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-2"></div>
+                    <div class="form-group col-2">
+                      <label for="po" style="font-size: large;">poNumber:</label>
+                    </div>
+                    <div class="form-group col-4">
                       <div>
-                        <mat-form-field floatLabel="never" class="form-element">
-                          <input  matInput  placeholder="Po#" formControlName="poNumber">
-                        </mat-form-field>
-                        <mat-icon class="pull-right tooltip-style" matTooltip="PO Information">info</mat-icon>
+                        <input type="text" placeholder="Po#" formControlName="poNumber"  style="width: 100%; padding-top: 10px;">
+                      </div> 
+                      <div *ngIf="formGroup.controls.poNumber.hasError('maxlength')" class="alert alert-danger">
+                          Max length exceeded          
+                      </div>   
+                    </div>
+                    <div class="form-group col-2"> 
+                      <mat-icon matTooltip="PO Information">info</mat-icon>
+                    </div>
+                    <div class="form-group col-2"> </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-4"></div>
+                    <div class="form-group col-4">
+                      <div>
+                        <button 
+                        type="search" 
+                        class="button button2"
+                        (click)="doSearch(formGroup.value)">Search</button>
                       </div>
-                      <div class="form-element">
-                            <button 
-                            mat-raised-button 
-                            color="primary" 
-                            type="search" 
-                            class="button"
-                            (click)="doSearch(formGroup.value)">Search</button>
-                      </div>
-                    
-                      <div class="example-container" *ngIf="isVisible"> 
-                        <div>
-                          <mat-form-field floatLabel="never" class="form-element">
-                            <input  matInput  placeholder="Invoice"  formControlName="invoice" required>
-                            <mat-error *ngIf="formGroup.controls.invoice.hasError('maxlength')">Max length exceeded</mat-error>
-                          </mat-form-field>
-                          <mat-icon class="pull-right tooltip-style" matTooltip="Invoice Information">info</mat-icon>
-                        </div>
-                        <div>
-                          <mat-form-field floatLabel="never" class="form-element">
-                            <mat-select [(value)]="selected" placeholder="Remit To Address">
-                              <mat-option *ngFor="let add of address"  [value]="add">{{add}}</mat-option>
-                        </mat-select>
-                          </mat-form-field>
-                          <mat-icon class="pull-right tooltip-style" matTooltip="Remit to Address Information">info</mat-icon>
-                        </div>
-                        <div>
-                          <mat-form-field floatLabel="never" class="form-element">
-                          <input matInput [matDatepicker]="picker"  placeholder="mm-dd-yyyy" formControlName="date" required>
-                            <mat-datepicker-toggle  matSuffix [for]="picker"></mat-datepicker-toggle>
-                            <mat-datepicker #picker></mat-datepicker>
-                          </mat-form-field>
-                          <mat-icon class="pull-right tooltip-style" matTooltip="Date Information">info</mat-icon>
-                        </div>
-                        <div>
-                          <mat-form-field floatLabel="never" class="form-element">
-                            <mat-select [(value)]="selectedCurrency" placeholder="Currency">
-                              <mat-option  [value]="currency">{{currency.UniqueName}}</mat-option>
-                            </mat-select>
-                          </mat-form-field>
-                          <mat-icon class="pull-right tooltip-style" matTooltip="Currency Information">info</mat-icon>
-                        </div>
-                      </div>
-                    </mat-card-content>
-                  </mat-card>
+                    </div>
+                    <div class="form-group col-4"></div>
               </div>
-              <div class="form-group col-4"></div>
+              <div *ngIf="isVisible">
+                <div class="form-row">
+                  <div class="form-group col-2"></div>
+                  <div class="form-group col-2">
+                    <label for="invoice" style="font-size: large;">InvoiceNumber:</label>
+                  </div>
+                  <div class="form-group col-4">
+                    <div>
+                    <input type="text" placeholder="InvoiceNumber" formControlName="invoice" style="width: 100%; padding-top: 10px;" required>
+                    <!-- <mat-error *ngIf="formGroup.controls.invoice.hasError('maxlength')">Max length exceeded</mat-error> -->
+                    </div>
+                    <div *ngIf="formGroup.controls.invoice.hasError('maxlength')" class="alert alert-danger">
+                      Max length exceeded          
+                  </div>
+                  </div>
+                  <div class="form-group col-2"> 
+                    <mat-icon matTooltip="Invoice Information">info</mat-icon>
+                  </div>
+                  <div class="form-group col-2"> </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-2"></div>
+                    <div class="form-group col-2">
+                      <label for="RemitToAddress" style="font-size: large;">RemitToAddress:</label>
+                    </div>
+                    <div class="form-group col-4">
+                      <div>
+                        <select [(value)]="selected" style="width: 100%; padding-top: 10px;">
+                            <option *ngFor="let add of address"  [value]="add">{{add}}</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="form-group col-2"> 
+                      <mat-icon matTooltip="Remit to Address Information">info</mat-icon>
+                    </div>
+                    <div class="form-group col-2"> </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-2"></div>
+                  <div class="form-group col-2">
+                    <label for="date" style="font-size: large;">Date:</label>
+                  </div>
+                  <div class="form-group col-4">
+                    <div>
+                        <input type="text" [matDatepicker]="picker"  placeholder="mm-dd-yyyy" formControlName="date" style="width: 90%;" required>
+                        <mat-datepicker-toggle  matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>          
+                    </div>
+                  </div>
+                  <div class="form-group col-2"> 
+                    <mat-icon matTooltip="Date Information">info</mat-icon>
+                  </div>
+                  <div class="form-group col-2"> </div>
+                 </div>
+                 <div class="form-row">
+                  <div class="form-group col-2"></div>
+                  <div class="form-group col-2">
+                    <label for="currency" style="font-size: large;">Currency:</label>
+                  </div>
+                  <div class="form-group col-4">
+                    <div>
+                      <select [(value)]="selectedCurrency" style="width: 100%; padding-top: 10px;">
+                          <option [value]="currency">{{currency.UniqueName}}</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="form-group col-2"> 
+                    <mat-icon matTooltip="Currency Information">info</mat-icon>
+                  </div>
+                  <div class="form-group col-2"> </div>
+                </div>
+              </div>
             </div>
               <div class="form-row">
-                <div class="form-group col-1"></div>
-                <div class="form-group col-10" *ngIf="headerBoolean">
+                <div class="form-group col-2"></div>
+                <div class="form-group col-8" *ngIf="headerBoolean">
                   <div class="panel panel-default panel-table">
                     <div class="panel-heading">
                         <div class="row">
@@ -144,25 +198,25 @@
                     <div class="col col-xs-6 text-left">
                       <div class="col col-xs-3">
                         <div class="pull-left">
-                          <button type="button" class="btn btn-primary">
+                          <button type="button" class="btn btn-primary" (click)="attachPDF()">
                               <mat-icon>attach_file</mat-icon>
                             </button>
                         </div>
                       </div>
                     </div>
                 </div>
-                <div class="form-group col-1"></div>
+                <div class="form-group col-2"></div>
               </div>
-            <div class="form-row" *ngIf="LineChargeBoolean">
+            <div class="form-row" *ngIf="isVisible">
               <!-- <app-tree-grid-load-on-demand-sample></app-tree-grid-load-on-demand-sample> -->
-              <div class="form-group col-1"></div>
-                <div class="form-group col-10">
+              <div class="form-group col-2"></div>
+                <div class="form-group col-8">
              
                 <div class="panel panel-default panel-table">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col col-xs-6">
-                                <h3 class="panel-title">Line charge</h3>
+                                <h3 class="panel-title">Line Items</h3>
                             </div>
                         </div>
                     </div>
@@ -171,7 +225,7 @@
                             <thead>
                             <tr>
                               <th><input type="checkbox" [checked]="isAllCheckBoxChecked()" (change)="checkAllCheckBox($event)"></th>
-                                <th class="col-text">Discount/Charges/Taxes</th>
+                                <th class="col-text" *ngIf="LineChargeBoolean">Discount/Charges/Taxes</th>
                                 <th class="col-text">S.No.</th>
                                 <th class="col-text">Description</th>
                                 <th class="col-text">Qty</th>
@@ -184,10 +238,10 @@
                             <tbody>
                             <tr *ngFor="let lineItem of element  let i=index;">
                               <td align="center"><input type="checkbox" value="{{lineItem.id}}" [(ngModel)]="element[i].checked" [ngModelOptions]="{standalone: true}"></td>
-                              <td>
-                                <div fxLayout="column" fxLayoutGap="20px" fxLayout.gt-md="row"  fxLayoutAlign="space-around center" class="content">
-                                  <div class="blocks">
-                                      <button button="submit" mat-raised-button color="primary" (click)="openRow(i);" >
+                              <td *ngIf="LineChargeBoolean">
+                                <!-- <div fxLayout="column" fxLayoutGap="20px" fxLayout.gt-md="row"  fxLayoutAlign="space-around center" class="content"> -->
+                                  <div>
+                                      <button button="submit" mat-raised-button color="primary" (click)="openRow();" >
                                           <mat-icon>add</mat-icon>
                                       </button>
                                   
@@ -241,9 +295,9 @@
                                           </tbody>
                                       </table>
                                       </div>
-                                  </div>
+                                  <!-- </div> -->
                                 </div>
-                              </td>
+                                </td>
                               <td>{{lineItem.NumberInCollection}}</td>
                               <td> <div class="a">{{lineItem["Description.Description"]}}</div></td>
                               <td>{{lineItem.Quantity}}</td>
@@ -251,16 +305,16 @@
                                 {{lineItem["Description.UnitOfMeasure"].UniqueName}}</td>
                               <td>${{lineItem.Amount.Amount}}</td>
                               <td>${{lineItem.Quantity*lineItem.Amount.Amount}}</td>
-                              <td></td>
+                              <td>${{lineItem.Quantity*lineItem.Amount.Amount}}</td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            <div class="form-group col-1"></div>
+            <div class="form-group col-2"></div>
         </div>
-        <div class="form-row" *ngIf="LineChargeBoolean">
+        <div class="form-row" *ngIf="isVisible">
           <div class="form-group col-4"></div>
           <div class="form-group col-4">
                 <div>
