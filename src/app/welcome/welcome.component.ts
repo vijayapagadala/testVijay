@@ -8,6 +8,9 @@ import { RemittoAddress } from "./address";
 import { Currency } from "./currency";
 import { Header} from "./header";
 import { DynamicGrid } from "./grid.model";
+import { HttpClient, HttpEventType } from "@angular/common/http";
+import { Subscription } from "rxjs";
+import { finalize } from "rxjs/operators";
 
 @Component({
     selector: 'app-welcome',
@@ -39,11 +42,14 @@ import { DynamicGrid } from "./grid.model";
     options: any;
     dialog: any;
     dynamicArray: Array<DynamicGrid> = [];
-    dynamicArraychild: Array<DynamicGrid> = [];
     newDynamic: any = {};
+    fileName = '';
+    uploadProgress:number;
+    uploadSub: Subscription;
   constructor(
       private formBuilder: FormBuilder,
-      private dataservice: DataService
+      private dataservice: DataService,
+      private http: HttpClient
       ) { }
 
 ngOnInit() {
@@ -84,33 +90,9 @@ doSearch(value: any) {
     if(value.poNumber.length >= 15){
       this.onSubmit();
     } else {
-       //  let params: {
-    //  email: 'jnarkar@gmail.com';
-    //  ponumber: value.poNumber;
-    //  anid: 'AN101'
-    // }
-
-    // this.options = params;
-    // alert(this.params);
-    /* doSearch parametrized function*/
-  //   this.httpClient.get('/url', {
-  //     params: {
-  //       email: 'jnarkar@gmail.com',
-  //       ponumber: value.poNumber,
-  //       anid: 'AN101'
-       
-  //     },
-  //     observe: 'response'
-  //   })
-  //   .toPromise()
-  //   .then(response => {
-  //     console.log(response);
-  //   })
-  //   .catch(console.log);
-  // }
     const searchData = []
     let sum: number = 0;
-      this.dataservice.getSearch().subscribe(res => {
+      this.dataservice.getSearch(value).subscribe(res => {
         this.isVisible = true;
           Object.keys(res).map(function(key){  
             searchData.push({[key]:res[key]})  
@@ -220,4 +202,38 @@ doSearch(value: any) {
     attachPDF() {
       alert('inside pdf function');
     }
+
+    onFileSelected(event) {
+      const file:File = event.target.files[0];
+    
+      if (file) {
+          this.fileName = file.name;
+          const formData = new FormData();
+          formData.append("thumbnail", file);
+
+          const upload$ = this.http.post("/api/thumbnail-upload", formData, {
+              reportProgress: true,
+              observe: 'events'
+          })
+          .pipe(
+              finalize(() => this.reset())
+          );
+        
+          this.uploadSub = upload$.subscribe(event => {
+            if (event.type == HttpEventType.UploadProgress) {
+              this.uploadProgress = Math.round(100 * (event.loaded / event.total));
+            }
+          })
+      }
+  }
+
+  cancelUpload() {
+    this.uploadSub.unsubscribe();
+    this.reset();
+  }
+
+  reset() {
+    this.uploadProgress = null;
+    this.uploadSub = null;
+  }
 }

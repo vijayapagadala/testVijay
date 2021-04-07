@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
 import { AuthService } from './auth.service';
@@ -6,19 +6,25 @@ import { SearchItem } from './SearchItem';
 
 @Injectable()
 export class DataService {
-  public header = {
-    headers: new HttpHeaders()
-      .set('Authorization',  `Basic ${btoa('LQorRwRima4wDK8VlOaNjJEsFCo8p2yHW2PO24hNHSvOFNICPgTniw==')}`)
-  }
-  constructor(private http: HttpClient) {
-  }
-
-   public getSearch(){
-  {
-  // const configUrl = 'https://purchaseorder.azurewebsites.net/api/BuyerSuppliedDetails?&email=jnarkar@gmail.com&ponumber=L3HPO2009&anid=AN1001'
  
-    return this.http.get("assets/response.json", this.header);
-  }
+   constructor(private http: HttpClient) {}
+
+   public getSearch(value){
+    let headers = new HttpHeaders();
+    const httpParams = new HttpParams({
+      fromObject: {
+        email: 'jnarkar@gmail.com',
+        ponumber: value.poNumber,
+        anid: 'AN1001',
+      }
+    });
+    headers = headers.set('x-functions-key', 'LQorRwRima4wDK8VlOaNjJEsFCo8p2yHW2PO24hNHSvOFNICPgTniw==')
+    const httpOptions = {
+      headers: headers,
+      params: httpParams,
+    };
+   const configUrl = 'https://purchaseorder.azurewebsites.net/api/BuyerSuppliedDetails'
+   return this.http.get(configUrl, httpOptions);
 }
 
 public getPageLoad(){
